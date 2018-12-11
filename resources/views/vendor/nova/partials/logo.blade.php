@@ -1,1 +1,1 @@
-<p class=" text-center w-full">ADZ Shoppe</p>
+<p class=" text-center w-full">SISAHY GO</p>

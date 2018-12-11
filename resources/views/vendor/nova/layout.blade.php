@@ -54,7 +54,7 @@
                     @yield('content')
 
                     <p class="mt-8 text-center text-xs text-80">
-                        ADZ Shoppe
+                        SISAHY GO
                     </p>
                 </div>
             </div>

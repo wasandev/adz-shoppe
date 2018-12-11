@@ -6,7 +6,7 @@
 @section('content')
 
     <div class="bg-hero h-hero flex items-center justify-center">
-        <h1 class="text-center text-white text-3xl md:text-5xl max-w-lg leading-tight"> Welcome to ADZ Shoppe Online Store </h1>
+        <h1 class="text-center text-white text-3xl md:text-5xl max-w-lg leading-tight"> Welcome to ADZ Shoppe Online Store - forge</h1>
     </div>
     <h2 class=" text-center my-6 text-2xl md:text-4xl">Our Products</h2>
     <div class="flex flex-wrap max-w-2xl mx-auto my-8">
