@@ -3,7 +3,7 @@
     <div class="flex justify-between items-baseline py-6 px-8">
         <div>
             <a href="/" class="no-underline hover:text-black transition">
-                <h1>ADZShoppe</h1>
+                <h1>SISAHYGO</h1>
             </a>
 
         </div>

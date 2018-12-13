@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <h1>My Test site </h1>
+    <h1>Sisahy GO </h1>
     <div class="flex flex-wrap max-w-2xl mx-auto my-8">
         @foreach ($products as $product)
             <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col">
