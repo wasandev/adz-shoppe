@@ -5,7 +5,10 @@
 
 @section('content')
 
-    <h1>Sisahy GO Forge </h1>
+    
+    <div class="bg-hero h-hero flex items-center justify-center">
+        <h1 class="text-center text-white text-3xl md:text-5xl max-w-lg leading-tight"> Welcome to SISAHY - GO</h1>
+    </div>
     <div class="flex flex-wrap max-w-2xl mx-auto my-8">
         @foreach ($products as $product)
             <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col">
