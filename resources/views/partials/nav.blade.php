@@ -12,11 +12,14 @@
                 <a href="{{ url('/') }}" class="text-white hover:text-black no-underline text-white">
                     Home
                 </a>    
-                <cart-icon></cart-icon>
+                
             @else
                 <a href="{{ route('login') }}" class="mr-2 no-underline text-white hover:text-grey-darkest transition text-lg mr-3">Login</a>
                 <a href="{{ route('register') }}" class="mr-2 no-underline text-white hover:text-grey-darkest transition text-lg mr-3">Register</a>
                 <cart-icon></cart-icon>
+                <a href="{{ route('login') }}" class="mr-2 no-underline text-grey-dark hover:text-grey-darkest transition text-lg mr-3">Login</a>
+                <a href="{{ route('register') }}" class="mr-2 no-underline text-grey-dark hover:text-grey-darkest transition text-lg mr-3">Register</a>
+                
             @endauth   
             
         </div>
