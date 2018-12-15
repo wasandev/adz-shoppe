@@ -3110,6 +3110,10 @@ table {
   font-family: Nunito, san-serif;
 }
 
+.font-prompt {
+  font-family: Prompt, san-serif;
+}
+
 .font-hairline {
   font-weight: 100;
 }
@@ -8791,6 +8795,10 @@ table {
     font-family: Nunito, san-serif;
   }
 
+  .sm\:font-prompt {
+    font-family: Prompt, san-serif;
+  }
+
   .sm\:font-hairline {
     font-weight: 100;
   }
@@ -14455,6 +14463,10 @@ table {
 
   .md\:font-nunito {
     font-family: Nunito, san-serif;
+  }
+
+  .md\:font-prompt {
+    font-family: Prompt, san-serif;
   }
 
   .md\:font-hairline {
@@ -20123,6 +20135,10 @@ table {
     font-family: Nunito, san-serif;
   }
 
+  .lg\:font-prompt {
+    font-family: Prompt, san-serif;
+  }
+
   .lg\:font-hairline {
     font-weight: 100;
   }
@@ -25787,6 +25803,10 @@ table {
 
   .xl\:font-nunito {
     font-family: Nunito, san-serif;
+  }
+
+  .xl\:font-prompt {
+    font-family: Prompt, san-serif;
   }
 
   .xl\:font-hairline {

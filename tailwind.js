@@ -230,6 +230,10 @@ module.exports = {
         'nunito': [
             'Nunito',
             'san-serif'
+        ],
+        'prompt': [
+            'Prompt',
+            'san-serif'
         ]
 
     },
