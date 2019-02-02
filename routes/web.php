@@ -17,13 +17,6 @@ use App\Http\Controllers\PagesController;
 Auth::routes();
 
 
-Route::get('/shop', 'ProductController@index');
-Route::get('/products/{product}', 'ProductController@show');
-
-
-
-Route::post('/form-submit', 'LeadController@store');
-
-Route::get('/links', 'LinksController@index')->name('link');
 
 Route::get('/', 'PagesController@home');
+

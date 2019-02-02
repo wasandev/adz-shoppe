@@ -26,7 +26,7 @@ mix.js(['resources/js/app.js'], 'public/js/app.js')
         'axios',
         'jquery',
     ])
-    .browserSync('adzshoppe.test');
+    .browserSync('sisahygo.test');
 
 if (mix.inProduction()) {
     mix.version();

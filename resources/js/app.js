@@ -39,7 +39,16 @@ Vue.component('cart-icon', require('./components/CartIcon.vue'));
 Vue.component('cart-button', require('./components/CartButton.vue'));
 import store from './store'
 
+
 const app = new Vue({
     el: "#app",
-    store
+    data: {
+        open: false,
+    },
+    methods: {
+        toggle() {
+            this.open = !this.open
+        }
+    },
+    store,
 });

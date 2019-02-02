@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Product;
+use App\Task;
+use App\Post;
+use Illuminate\Support\Facades\Storage;
+
+
 
 class PagesController extends Controller
 {
     public function home()
     {
-        $products = Product::all();
-        //dd($products);
-        return view('welcome', ['products' => $products]);
-
+        $tasks = Task::all();
+        $posts = Post::all();
+        return view('welcome', compact('tasks', 'posts'));
     }
 }

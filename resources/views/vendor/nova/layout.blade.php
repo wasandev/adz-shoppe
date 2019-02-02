@@ -54,7 +54,8 @@
                     @yield('content')
 
                     <p class="mt-8 text-center text-xs text-80">
-                        SISAHY GO
+                        
+                        @include('nova::partials.footer')
                     </p>
                 </div>
             </div>

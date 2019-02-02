@@ -5,25 +5,48 @@
 
 @section('content')
 
+    <main class="site-main">
     
-    <div class="bg-hero h-hero flex items-center justify-center">
-        <h1 class="text-center text-white text-3xl md:text-5xl max-w-lg leading-tight"> Welcome to SISAHY - GO</h1>
-    </div>
-    <div class="flex flex-wrap max-w-2xl mx-auto my-8">
-        @foreach ($products as $product)
-            <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col">
-                    <a href="/products/{{ $product->slug }}" class=" flex flex-col flex-1 rounded shadow hover:shadow-lg translateY-2px m-6 no-underline transition" >
+    {{-- <div class="bg-hero h-hero flex items-center justify-center">
+        <h1 class="text-center text-white text-3xl md:text-5xl max-w-lg leading-tight">Sisahy Go </h1>
+    </div> --}}
+
+    <div class="container mx-auto">
+           
+        <div class="flex flex-wrap max-w-1xl mx-auto">
+            @foreach ($tasks as $task)
+                <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col">
+                    <a href="/tasks/{{ $task->name }}" class=" flex flex-col flex-1 rounded shadow hover:shadow-lg translateY-2px m-6 no-underline transition" >
                     
-                        <div class="aspect-16x9 rounded-t" style="background:url('{{ $product->preview_image_url }}') no-repeat center center/cover"></div>
+                        <div class="aspect-16x9 rounded-t" style="background:url('{{  Storage::url($task->taskimage) }}') no-repeat center center/cover"></div>
                         <div class="p-6 flex flex-col flex-1">
-                            <h2 class="mb-3 text-grey-darkest text-2xl">{{ $product->title }}</h2>                        
-                            <p class="text-grey-darker mb-6 text-lg">{{ '$'.money_format('%.2n', $product->price/100 )}} </p>
-                            <p class="text-blue no-underline font-bold">See Product</p>
+                            <h2 class="mb-3 text-grey-darkest text-lg">{{ $task->name }}</h2>  
+                            <p class="text-blue no-underline">{{ $task->description }}</p>
                         </div>
                     </a>
                 </div>
-            
-        @endforeach
+            @endforeach
+
+        </div>
+        <div class='text-center text-red-light my-2 text-xl md:text-xl'>
+            ข่าวสาร/โปรโมชั่น
+        </div>
+         <div class="flex flex-wrap max-w-1xl mx-auto">
+            @foreach ($posts as $post)
+                <div class="w-full md:w-1/2 lg:w-1/2 flex flex-col">
+                    <a href="/tasks/{{ $post->name }}" class=" flex flex-col flex-1 rounded shadow hover:shadow-lg translateY-2px m-6 no-underline transition" >
+                    
+                        <div class="aspect-16x9 rounded-t" style="background:url('{{  Storage::url($post->postimage) }}') no-repeat center center/cover"></div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h2 class="mb-3 text-grey-darkest text-lg">{{ $post->name }}</h2>  
+                            <p class="text-blue no-underline">{{ $post->description }}</p>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+
+        </div>
     </div>
+    </main>
 
 @endsection

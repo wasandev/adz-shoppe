@@ -2,15 +2,22 @@
 
 namespace App\Nova;
 
+use Laravel\Nova\Resource as NovaResource;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\Password;
-use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\HasOne;
+use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Panel;
 
 class User extends Resource
 {
+    public static $group = 'Admin';
+
     /**
      * The model the resource corresponds to.
      *
@@ -34,6 +41,15 @@ class User extends Resource
         'id', 'name', 'email',
     ];
 
+    /**
+     * Get the displayble label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'ข้อมูลผู้ใช้';
+    }
     /**
      * Get the fields displayed by the resource.
      *
@@ -61,10 +77,37 @@ class User extends Resource
                 ->onlyOnForms()
                 ->creationRules('required', 'string', 'min:6')
                 ->updateRules('nullable', 'string', 'min:6'),
-            HasMany::make('Note')
+            Select::make('Role')
+                ->options([
+                    'admin' => 'Admin',
+                    'employee' => 'Employee',
+                    'customer' => 'Customer',
+                ])
+                ->canSee(function ($request) {
+                    return $request->user()->role == 'admin';
+                }),
+
+            new Panel('ลงทะเบียนรหัสลูกค้า', $this->customerCodeFields()),
+
+            HasOne::make('Customer'),
+
+
         ];
     }
+    /**
+     * Get the customer_code fields for the resource.
+     *
+     * @return array
+     */
+    protected function customerCodeFields()
+    {
+        return [
+            Text::make('รหัสลูกค้า', 'customer_code')
+                ->hideFromIndex()
+                ->rules('numeric', 'exists:customer'),
 
+        ];
+    }
     /**
      * Get the cards available for the request.
      *
@@ -107,5 +150,14 @@ class User extends Resource
     public function actions(Request $request)
     {
         return [];
+    }
+
+    public static function indexQuery(NovaRequest $request, $query)
+    {
+        if ($request->user()->role == 'admin') {
+            return $query;
+        } else {
+            return $query->where('id', $request->user()->id);
+        }
     }
 }

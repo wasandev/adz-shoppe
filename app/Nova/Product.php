@@ -4,18 +4,15 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\BelongsTo;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Laravel\Nova\Fields\Textarea;
-use Laravel\Nova\Fields\HasMany;
-use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Number;
-
 
 
 class Product extends Resource
 {
+    public static $group = 'ข้อมูลสินค้าและราคาขนส่ง';
     /**
      * The model the resource corresponds to.
      *
@@ -28,7 +25,7 @@ class Product extends Resource
      *
      * @var string
      */
-    public static $title = 'title';
+    public static $title = 'product_name';
 
     /**
      * The columns that should be searched.
@@ -36,11 +33,18 @@ class Product extends Resource
      * @var array
      */
     public static $search = [
-        'title',
-        'type',
-        'status',
+        'product_code',
+        'product_name'
     ];
-
+    /**
+     * Get the displayble label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'ข้อมูลสินค้า';
+    }
     /**
      * Get the fields displayed by the resource.
      *
@@ -50,44 +54,13 @@ class Product extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
-            Text::make('Title')
-                ->rules('required')
+
+            Text::make('รหัสสินค้า', 'product_code')
                 ->sortable(),
-            Text::make('Image Url', 'preview_image_url')
-                ->onlyOnForms()
-                ->rules('url'),
-
-            Select::make('Status')
-                ->options(\App\Product::statuses())
-                ->rules('required')
+            Text::make('ชื่อสินค้า', 'product_name')
                 ->sortable(),
-            Select::make('Type')
-                ->options(\App\Product::types())
-                ->rules('required')
-                ->sortable(),
-            Number::make('Price($)', function () {
-                return money_format('%.2n', $this->price / 100);
-            })->exceptOnForms(),
 
-            Number::make('Cost($)', function () {
-                return money_format('%.2n', $this->cost / 100);
-            })->exceptOnForms(),
-
-            Number::make('Price (Cents)', 'price')
-                ->min(100)
-                ->max(10000000)
-                ->step(1)
-                ->onlyOnForms(),
-            Number::make('Cost (Cents', 'cost')
-                ->min(100)
-                ->max(10000000)
-                ->step(1)
-                ->onlyOnForms(),
-            Textarea::make('Description'),
-            HasMany::make('Inventory', 'Inventory', Inventory::class),
-
-
+            HasMany::make('ค่าขนส่ง', 'product_price', Product_price::class),
 
         ];
     }

@@ -6,8 +6,11 @@ use Laravel\Nova\Nova;
 use Laravel\Nova\Cards\Help;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\NovaApplicationServiceProvider;
-
-
+use App\Nova\Metrics\Order_headersPerDay;
+use App\Nova\Metrics\OrderamountPerDay;
+use App\Nova\Metrics\OrderamountPerMonth;
+use App\Task;
+use App\Observers\TaskObserver;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -19,7 +22,13 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function boot()
     {
         parent::boot();
+
+        Nova::serving(function () {
+            Task::observe(TaskObserver::class);
+        });
+
     }
+
 
     /**
      * Register the Nova routes.
@@ -58,7 +67,20 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function cards()
     {
         return [
-           //new Help,
+            (new OrderamountPerMonth)->width('full')
+                ->canSee(function ($request) {
+                    return $request->user()->role == 'admin';
+                }),
+            (new Order_headersPerDay)->width('1/2')
+                ->canSee(function ($request) {
+                    return $request->user()->role == 'admin';
+                }),
+            (new OrderamountPerDay)->width('1/2')
+                ->canSee(function ($request) {
+                    return $request->user()->role == 'admin';
+                }),
+
+
         ];
     }
 
