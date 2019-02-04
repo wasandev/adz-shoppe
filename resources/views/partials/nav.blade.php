@@ -1,9 +1,9 @@
 
     <nav class="flex items-center justify-between shadow flex-wrap bg-white p-2" >
         <div class="flex items-center flex-no-shrink text-red-light mr-8">
-            {{-- 
+            
             <img  class="fill-current h-12 w-12 mr-4" src="{{ Storage::url('logo.jpg') }}" />
-           --}}  
+           
             <span class="font-semibold text-xl tracking-tight">SISAHY GO</span>
             </div>
         

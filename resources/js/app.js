@@ -28,7 +28,16 @@ import {
     FontAwesomeLayersText
 } from '@fortawesome/vue-fontawesome'
 
+library.add(faShoppingCart);
 
+Vue.component('font-awesome-icon', FontAwesomeIcon);
+Vue.component('font-awesome-layers', FontAwesomeLayers);
+Vue.component('font-awesome-layers-text', FontAwesomeLayersText);
+Vue.component('size-selector-component', require('./components/SizeSelectorComponent.vue'));
+Vue.component('color-selector-component', require('./components/ColorSelectorComponent.vue'));
+Vue.component('cart-icon', require('./components/CartIcon.vue'));
+Vue.component('cart-button', require('./components/CartButton.vue'));
+import store from './store'
 
 
 const app = new Vue({
@@ -41,5 +50,5 @@ const app = new Vue({
             this.open = !this.open
         }
     },
-    //store,
+    store,
 });
