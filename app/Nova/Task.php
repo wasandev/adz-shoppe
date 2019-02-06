@@ -64,9 +64,7 @@ class Task extends Resource
             ID::make()->sortable(),
             Text::make('ชื่องาน', 'name')->sortable(),
             Image::make('ภาพระบบงาน', 'taskimage')
-                ->disk('public')
-                ->path('tasks')
-                ->prunable(),
+                ->disk('public'),
             Text::make('Link url', 'tasklink')
                 ->hideFromIndex(),
             Textarea::make('รายละเอียด', 'description')->hideFromIndex(),

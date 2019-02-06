@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         
         <!-- Scripts -->
-        <script src="{{ mix('/js/manifest.js') }}" defer></script>
-        <script src="{{ mix('/js/vendor.js') }}" defer></script>
+        
+        
         <script src="{{ mix('/js/app.js') }}" defer></script>
         @if (App::environment('production', 'staging'))
             <script>
@@ -32,7 +32,7 @@
             </script>
         @endif
 
-        <link rel="manifest" href="/manifest.json">
+       
 
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     </head>

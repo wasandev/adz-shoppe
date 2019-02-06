@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('name', 255);
             $table->text('description');
             $table->boolean('is_published')->nullable()->default(false);
-            $table->string('postimage')->unique();
+            $table->string('postimage')->nullable();
             $table->string('postlink', 255)->nullable();
             $table->integer('user_id')->unsigned();
             $table->timestamps();

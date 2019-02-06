@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <main class="site-main">
+    
     
     {{-- <div class="bg-hero h-hero flex items-center justify-center">
         <h1 class="text-center text-white text-3xl md:text-5xl max-w-lg leading-tight">Sisahy Go </h1>
@@ -47,6 +47,6 @@
 
         </div>
     </div>
-    </main>
+    
 
 @endsection

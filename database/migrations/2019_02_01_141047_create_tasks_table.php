@@ -18,7 +18,7 @@ class CreateTasksTable extends Migration
             $table->string('name', 255);
             $table->text('description');
             $table->boolean('is_active')->nullable()->default(false);
-            $table->string('taskimage')->unique();
+            $table->string('taskimage')->nullable();
             $table->string('tasklink', 255)->nullable();
             $table->integer('user_id')->unsigned();
             $table->timestamps();

@@ -16,8 +16,6 @@ window.Vue = require('vue');
  */
 
 
-
-
 const app = new Vue({
     el: "#app",
     data: {
@@ -28,5 +26,5 @@ const app = new Vue({
             this.open = !this.open
         }
     },
-    store,
+
 });

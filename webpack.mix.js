@@ -1,6 +1,6 @@
 const mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss');
-require('laravel-mix-purgecss');
+
 
 /*
  |--------------------------------------------------------------------------
@@ -13,21 +13,9 @@ require('laravel-mix-purgecss');
  |
  */
 
-mix.js(['resources/js/app.js'], 'public/js/app.js')
+mix.js('resources/js/app.js', 'public/js/app.js')
     .sass('resources/sass/app.sass', 'public/css')
     .options({
         processCssUrls: false,
         postCss: [tailwindcss('./tailwind.js')],
     })
-    .purgeCss()
-    .extract([
-        'vue',
-        'lodash',
-        'axios',
-        'jquery',
-    ])
-    .browserSync('sisahygo.test');
-
-if (mix.inProduction()) {
-    mix.version();
-}

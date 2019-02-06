@@ -61,9 +61,7 @@ class Post extends Resource
             ID::make()->sortable(),
             Text::make('หัวข้อข่าว', 'name')->sortable(),
             Image::make('ภาพข่าว', 'postimage')
-                ->disk('public')
-                ->path('posts')
-                ->prunable(),
+                ->disk('public'),
             Text::make('Link url', 'postlink')
                 ->hideFromIndex(),
             Textarea::make('รายละเอียด', 'description')->hideFromIndex(),

@@ -15,6 +15,8 @@ class PagesController extends Controller
     {
         $tasks = Task::all();
         $posts = Post::all();
+
+
         return view('welcome', compact('tasks', 'posts'));
     }
 }
