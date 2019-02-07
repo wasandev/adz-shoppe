@@ -1,29 +1,24 @@
 {
-    "name": "Sisahy Go",
-    "short_name": "Sisahy Go",
-    "description": "Progressive web apps for  Sisahy CRM",
+    "name": "Sisahy GO",
+    "short_name": "SisahyGO",
+    "description": "Sisahy Transport web application for Our Customer",
     "dir": "ltr",
-    "lang": "en",
+    "lang": "th",
     "icons": [{
-            "src": "/icon/sisahygo-192x192.png",
+            "src": "/images/icons/sisahygo-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/icon/sisahygo-512x512.png",
+            "src": "/images/icons/sisahygo-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#456BD9",
-    "background_color": "#456BD9",
+    "theme_color": "#0C60A1",
+    "background_color": "#0C60A1",
     "display": "standalone",
     "orientation": "natural",
     "start_url": "/",
-    "categories": [
-        "business",
-        "technology",
-        "web"
-    ],
-    "gcm_sender_id": "482941778795"
+    "categories": ["business", "transport", "web"]
 }
