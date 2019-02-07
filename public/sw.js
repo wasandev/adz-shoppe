@@ -13,7 +13,7 @@
 
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
-workbox.core.setCacheNameDetails({prefix: "hr-app-1549527409"});
+workbox.core.setCacheNameDetails({prefix: "hr-app-1549531560"});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
