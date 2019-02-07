@@ -20,8 +20,8 @@
                     
                         <div class="aspect-16x9 rounded-t" style="background:url('{{  Storage::url($task->taskimage) }}') no-repeat center center/cover"></div>
                         <div class="p-6 flex flex-col flex-1">
-                            <h2 class="mb-3 text-red-light text-lg">{{ $task->name }}</h2>  
-                            <p class=" text-grey-lighter no-underline">{{ $task->description }}</p>
+                            <h2 class="mb-3 text-red-dark text-base">{{ $task->name }}</h2>  
+                            <p class=" text-grey-lighter no-underline text-sm">{{ $task->description }}</p>
                         </div>
                     </a>
                 </div>

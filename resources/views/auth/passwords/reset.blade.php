@@ -1,12 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('nav')
     @include('partials.nav')
 @endsection
 @section('content')
-<div class="flex items-center">
-    <div class="md:w-1/2 md:mx-auto">
+<div class="flex flex-wrap items-center py-32 px-6 py-32 md:px-0">
+    <div class="w-full max-w-md md:mx-auto">
         <div class="rounded shadow">
-            <div class="font-medium text-lg text-teal-darker bg-teal p-3 rounded-t">
+            <div class=" font-semibold text-base text-teal-darker bg-indigo p-2 rounded-t">
                 {{ __('Reset Password') }}
             </div>
             <div class="bg-white p-3 rounded-b">
@@ -41,7 +41,7 @@
 
                     <div class="flex">
                         <div class="w-3/4 ml-auto">
-                            <button type="submit" class="bg-teal hover:bg-teal-dark text-white text-sm font-semibold py-2 px-4 rounded mr-3">
+                            <button type="submit" class="bg-indigo hover:bg-indigo-dark text-white text-base font-semibold py-2 px-4 rounded mr-3">
                                 {{ __('Reset Password') }}
                             </button>
                         </div>

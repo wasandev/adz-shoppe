@@ -7,14 +7,14 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>SISAHY GO</title>
 
-        <!-- Fonts -->
+      
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,800,800i,900,900i" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         
         <!-- Scripts -->
         
-        
+
         <script src="{{ mix('/js/app.js') }}" defer></script>
         @if (App::environment('production', 'staging'))
             <script>
@@ -33,7 +33,8 @@
         @endif
 
        
-
+        <link rel ="manifest" href ="/manifest.json">
+    
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     </head>
     <body class="bg-indigo-lightest font-nunito text-base text-grey-darker leading-loose">
