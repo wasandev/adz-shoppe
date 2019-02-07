@@ -1,11 +1,11 @@
 
     <nav class="flex items-center justify-between shadow flex-wrap bg-white p-2" >
         <div class="flex items-center flex-no-shrink text-indigo mr-8">           
-            
-            <svg class="fill-current h-8 w-8 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <svg class="fill-current h-8 w-8 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path d="M7 3H2v14h5V3zm2 0v14h9V3H9zM0 3c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm3 1h3v2H3V4zm0 3h3v2H3V7zm0 3h3v2H3v-2z"/>
             </svg>
-            <span class="font-semibold text-base tracking-tight">SISAHY GO</span>
+        
+            <span class="font-semibold text-base tracking-tight text-blue">SISAHY GO</span>
         </div>
         
         <div class="block lg:hidden">
@@ -22,7 +22,7 @@
    
                 @auth
                 <div>
-                    <a href="#responsive-header" class="mr-2 no-underline text-indigo-darker hover:text-red-light transition text-base mr-3">
+                    <a href="/" class="mr-2 no-underline text-indigo-darker hover:text-red-light transition text-base mr-3">
                         Docs
                     </a>
                     <a href="#responsive-header" class="mr-2 no-underline text-indigo-darker hover:text-red-light transition text-base mr-3">
@@ -32,11 +32,11 @@
                 
                 @else
                 <div>
-                    <a href="#responsive-header" class="mr-2 no-underline text-indigo-darker hover:text-red-light transition text-base mr-3">
+                    <a href="/" class="mr-2 no-underline text-indigo-darker hover:text-red-light transition text-base mr-3">
                         หน้าหลัก
                     </a>
                                         
-                    <a href="#responsive-header" class="mr-2 no-underline text-indigo-darker hover:text-red-light transition text-base mr-3">
+                    <a href="/" class="mr-2 no-underline text-indigo-darker hover:text-red-light transition text-base mr-3">
                         ติดตามสินค้า
                     </a>
                     
