@@ -16,12 +16,12 @@
         <div class="flex flex-wrap max-w-1xl mx-auto">
             @foreach ($tasks as $task)
                 <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col">
-                    <a href="/tasks/{{ $task->name }}" class=" flex flex-col flex-1 rounded shadow hover:shadow-lg translateY-2px m-6 no-underline transition bg-indigo-light" >
+                    <a href="/tasks/{{ $task->name }}" class=" flex flex-col flex-1 rounded shadow hover:shadow-lg translateY-2px m-6 no-underline transition" >
                     
                         <div class="aspect-16x9 rounded-t" style="background:url('{{  Storage::url($task->taskimage) }}') no-repeat center center/cover"></div>
                         <div class="p-6 flex flex-col flex-1">
-                            <h2 class="mb-3 text-red-dark text-base">{{ $task->name }}</h2>  
-                            <p class=" text-grey-lighter no-underline text-sm">{{ $task->description }}</p>
+                            <h2 class="mb-3 text-red-dark text-lg">{{ $task->name }}</h2>  
+                            <p class=" text-grey-lighter no-underline text-base">{{ $task->description }}</p>
                         </div>
                     </a>
                 </div>
@@ -34,12 +34,12 @@
          <div class="flex flex-wrap max-w-1xl mx-auto">
             @foreach ($posts as $post)
                 <div class="w-full md:w-1/2 lg:w-1/2 flex flex-col">
-                    <a href="/tasks/{{ $post->name }}" class=" flex flex-col flex-1 rounded shadow hover:shadow-lg translateY-2px m-6 no-underline transition bg-green-light" >
+                    <a href="/tasks/{{ $post->name }}" class=" flex flex-col flex-1 rounded shadow hover:shadow-lg translateY-2px m-6 no-underline transition" >
                     
                         <div class="aspect-16x9 rounded-t" style="background:url('{{  Storage::url($post->postimage) }}') no-repeat center center/cover"></div>
                         <div class="p-6 flex flex-col flex-1">
                             <h2 class="mb-3 text-grey-darkest text-lg">{{ $post->name }}</h2>  
-                            <p class="text-white no-underline">{{ $post->description }}</p>
+                            <p class="text-white no-underline text-base">{{ $post->description }}</p>
                         </div>
                     </a>
                 </div>
