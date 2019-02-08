@@ -6,7 +6,7 @@
 <div class="flex flex-wrap items-center px-6 py-32 md:px-0">
     <div class="w-full max-w-md md:mx-auto">
         <div class="rounded shadow">
-            <div class="font-base text-lg text-white bg-indigo p-2 rounded-t">
+            <div class="font-base text-lg text-white bg-brand p-2 rounded-t">
                 {{ __('Login') }}
             </div>
             <div class="bg-white p-3 rounded-b">
@@ -37,7 +37,7 @@
 
                     <div class="flex">
                         <div class="w-3/4 ml-auto">
-                            <button type="submit" class="bg-indigo hover:bg-indigo-dark text-white text-base font-semibold py-2 px-4 rounded mr-3">
+                            <button type="submit" class="bg-brand hover:bg-brand-dark text-white text-base font-semibold py-2 px-4 rounded mr-3">
                                 {{ __('Login') }}
                             </button>
                             <a class="no-underline hover:underline text-teal-darker text-sm" href="{{ route('password.request') }}">

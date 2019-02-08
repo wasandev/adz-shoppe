@@ -38,7 +38,7 @@
     
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     </head>
-    <body class=" bg-white font-nunito text-base text-grey-darker leading-loose">
+    <body class=" bg-white font-sans text-base text-brand leading-loose">
         <div id="app">
             @yield('nav')
             @yield('content')
