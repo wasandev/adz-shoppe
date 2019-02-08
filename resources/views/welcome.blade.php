@@ -14,7 +14,7 @@
                     
                         <div class="aspect-16x9 rounded-t" style="background:url('{{  Storage::url($task->taskimage) }}') no-repeat center center/cover"></div>
                         <div class="p-3 flex flex-col flex-1 text-center">
-                            <h2 class="mb-3  text-bland text-base">{{ $task->name }}</h2>  
+                            <h2 class="mb-2  text-bland text-base">{{ $task->name }}</h2>  
                             </div>
                     </a>
                 </div>
@@ -31,7 +31,7 @@
                     
                         <div class="aspect-16x9 rounded-t" style="background:url('{{  Storage::url($post->postimage) }}') no-repeat center center/cover"></div>
                         <div class="p-3 flex flex-col flex-1">
-                            <h2 class="mb-3 text-cta text-base">{{ $post->name }}</h2>  
+                            <h2 class="mb-2 text-cta text-base">{{ $post->name }}</h2>  
                             <p class=" text-black no-underline text-sm">{{ $post->description }}</p>
                         </div>
                     </a>
