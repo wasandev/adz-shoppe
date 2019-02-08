@@ -5,12 +5,6 @@
 
 @section('content')
 
-    
-    
-    <div class="bg-hero h-hero flex items-center justify-center">
-        <h1 class="text-center text-white text-3xl md:text-5xl max-w-lg leading-tight">Sisahy Go </h1>
-    </div> 
-
     <div class="container mx-auto">
            
         <div class="flex flex-wrap max-w-1xl mx-auto">
