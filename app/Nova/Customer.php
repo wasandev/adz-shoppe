@@ -80,7 +80,7 @@ class Customer extends Resource
                 'C' => 'ยกเลิกการให้เครดิด',
                 'N' => 'ไม่ใช้งาน',
             ])->hideFromIndex()->displayUsingLabels(),
-            new Panel('ที่อยู่', $this->addressFields()),
+            //new Panel('ที่อยู่', $this->addressFields()),
 
             /* HasMany::make('รายการส่งสินค้า', 'order_header', Order_header::class)
                 ->canSee(function ($request) {

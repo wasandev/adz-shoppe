@@ -17,7 +17,7 @@ class Amphur extends Model
 
     public function province()
     {
-        return $this->belongsTo('App\Province');
+        return $this->belongsTo('App\Province', 'province_code');
 
     }
 
