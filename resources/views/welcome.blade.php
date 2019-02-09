@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <div class="container mx-auto">
+    
            
         <div class="flex flex-wrap max-w-1xl mx-auto">
             @foreach ($tasks as $task)
@@ -15,7 +15,7 @@
                         <div class="aspect-16x9 rounded-t" style="background:url('{{  Storage::url($task->taskimage) }}') no-repeat center center/cover"></div>
                         <div class="p-3 flex flex-col flex-1 text-center">
                             <h2 class="mb-2  text-bland text-base">{{ $task->name }}</h2>  
-                            </div>
+                        </div>
                     </a>
                 </div>
             @endforeach
@@ -39,7 +39,7 @@
             @endforeach
 
         </div>
-    </div>
+    
     
 
 @endsection
