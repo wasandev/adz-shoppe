@@ -82,7 +82,7 @@ class Customer extends Resource
             ])->hideFromIndex()->displayUsingLabels(),
             new Panel('ที่อยู่', $this->addressFields()),
 
-            HasMany::make('รายการส่งสินค้า', 'order_header', Order_header::class)
+            /* HasMany::make('รายการส่งสินค้า', 'order_header', Order_header::class)
                 ->canSee(function ($request) {
                     return $request->user()->role == 'admin' or $request->user()->role == 'employee';
                 }),
@@ -90,7 +90,7 @@ class Customer extends Resource
                 ->canSee(function ($request) {
                     return $request->user()->role == 'admin' or $request->user()->role == 'employee';
                 }),
-
+         */
         ];
     }
 
