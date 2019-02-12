@@ -37,7 +37,7 @@ Route::any('/tracking', function () {
     else
       return view('tracking')->withMessage('ไม่พบข้อมูลใบรับส่งสินค้าในระบบ กรุณาลองใหม่ !');
   }
-  return view('tracking')->withMessage('ป้อนเลขที่ใบรับส่งที่ต้องการติดตามสินค้า');
+  return view('tracking')->withMessage('โปรดป้อนเลขที่ใบรับส่ง,ชื่อผู้ส่งหรือชื่อผู้รับที่ต้องการติดตามสินค้า');
 
 })->name("tracking"); 
   

@@ -6,9 +6,9 @@
 <div class="flex flex-wrap items-center px-6 py-8 md:px-0">
     <div class="w-full max-w-xl md:mx-auto">
       <div class="rounded shadow">
-            <div class="font-xl text-2xl text-white bg-sisahy-light p-1 rounded-t">
+            <div class="font-xl text-lg text-white bg-sisahy-light p-1 rounded-t">
                 <svg class="fill-current h-4 w-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 2C0 .9.9 0 2 0h16a2 2 0 0 1 2 2v2H0V2zm1 3h18v13a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5zm6 2v2h6V7H7z"/></svg>
-                ติดตามสินค้า/Track your items (Beta version)
+                ติดตามสินค้า(Beta version)
             </div>
             <div class="bg-white p-3 rounded-b py-8">
               <form class="form-horizontal" method="POST" action="/tracking">
@@ -91,24 +91,27 @@
     
     @elseif(isset($message))
     <div class=" items-center bg-red-lightest border border-red-light text-red-dark px-4 py-3 rounded relative" role="alert">
-        <strong class="font-bold">{{ $message }}</strong>
-            <span class="block sm:inline"><br/>หรือติดต่อสอบถามข้อมูลเพิ่มเติมได้ที่ Call Center T: 024516712-5 .</span>
+            <span class="font-sm">{{ $message }}</span>           
+            <span class="block sm:inline text-center"><br/>***สามารถติดตามสินค้าได้ในวันถัดไปหลังจากวันส่งสินค้า ติดตามข้อมูลย้อนหลังได้ 7 วัน*** </span>
                 <span class="absolute pin-t pin-b pin-r px-4 py-3">
                     <svg class="fill-current h-6 w-6 text-red" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
                 </span>
+                 
     </div>
+
     @endif
     
  </div>
 
  <div class="w-full max-w-xl md:mx-auto py-4">
     <div class="text-center py-4 lg:px-4">
-        <div class="p-2 bg-sisahy-darker items-center text-indigo-lightest leading-none lg:rounded-full flex lg:inline-flex" role="alert">
-            <span class="flex rounded-full bg-sisahy uppercase px-2 py-1 text-xs font-bold mr-3">Sisahy GO</span>
-            <span class="font-semibold mr-2 text-left flex-auto">พบกับระบบบริการลูกค้าเต็มรูปแบบเร็วๆนี้ สอบถามเพิ่มเติม T: 024516712-5</span>
+        <div class="p-2 bg-sisahy-darker items-center text-sisahy-lightest leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+            <span class="flex rounded-full bg-sisahy uppercase px-2 py-1 text-xs  mr-3">SISAHYGO</span>
+            <span class="font-sm mr-2 text-left flex-auto">พบกับระบบบริการลูกค้าเต็มรูปแบบเร็วๆนี้ สอบถามเพิ่มเติม T: 024516712-5</span>
             <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
         </div>
     </div>
  </div>
+
 </div>
 @endsection
