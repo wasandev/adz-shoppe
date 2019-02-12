@@ -4,8 +4,6 @@
 @endsection
 
 @section('content')
-
-    
            
         <div class="flex flex-wrap max-w-1xl mx-auto">
             @foreach ($tasks as $task)
@@ -24,7 +22,8 @@
         <div class='text-center text-info my-2 text-xl md:text-xl'>
             ข่าวสาร/โปรโมชั่น
         </div>
-         <div class="flex flex-wrap max-w-1xl mx-auto">
+        
+        <div class="flex flex-wrap max-w-1xl mx-auto">
             @foreach ($posts as $post)
                 <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 flex flex-col">
                     <a href="/posts/{{ $post->name }}" class=" flex flex-col flex-1 rounded shadow hover:shadow-lg translateY-2px m-6 no-underline transition" >

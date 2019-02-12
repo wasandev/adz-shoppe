@@ -2,10 +2,13 @@
 
 namespace App;
 
+
 use Illuminate\Database\Eloquent\Model;
 
 class Order_header extends Model
 {
+
+
     protected $table = 'order_header';
     protected $casts = [
         'order_header_date' => 'datetime:Y-m-d',
