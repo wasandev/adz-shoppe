@@ -13,10 +13,10 @@ class PagesController extends Controller
 {
     public function home()
     {
-        //$tasks = Task::all();
-        //$posts = Post::all();
+        $tasks = Task::all();
+        $posts = Post::all();
 
-        return view('tracking');
+        return view('welcome', compact('tasks', 'posts'));
     }
 
 

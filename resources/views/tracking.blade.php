@@ -39,10 +39,10 @@
                      
                     <div class="p-3 flex flex-col flex-1 ">
                         
-                        <div class="font-base text-lg text-white bg-sisahy-light p-2  text-center">
+                        <div class="font-base text-lg text-white bg-red-light p-2  text-center">
                              @switch($order->order_status)
                                 @case('1')
-                                    <h2 class="no-underline text-base">รับสินค้าไว้แล้วเตรียมจัดส่ง/h2>                                    
+                                    <h2 class="no-underline text-base">รับสินค้าไว้แล้วเตรียมจัดส่ง</h2>                                    
                                     @break
                                 @case('2')
                                     <h2 class="no-underline text-base">สินค้าอยู่ระหว่างขนส่ง</h2>                                    
@@ -61,7 +61,7 @@
                                     @break
                                 
                             @endswitch
-                            <p class=" no-underline text-base">วันที่อัพเดทข้อมูล : {{ $order->updated_at }}</p>
+                            <p class=" no-underline text-sm">วันที่อัพเดทข้อมูล : {{ $order->updated_at }}</p>
                             
                         </div>
                         <div class="font-base text-lg text-sisahy-darker p-2 rounded-t text-center">
@@ -75,11 +75,11 @@
                             <svg class="fill-current text-grey w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
                             </svg>
-                            <span class="inline-block  rounded-full  py-1 text-lg font-semibold text-grey-darker mr-1">{{ $order->branchname }} </span>
+                            <span class="inline-block  rounded-full   text-base font-semibold text-grey-darker mr-1">{{ $order->branchname }} </span>
                             <svg class="fill-current text-grey w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M20 18.35V19a1 1 0 0 1-1 1h-2A17 17 0 0 1 0 3V1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 0 1 .99 1v3.35z"/>
                             </svg>
-                            <span class="inline-block  rounded-full  py-1 text-lg font-semibold text-grey-darker mr-1">{{ $order->branchphone }}</span>
+                            <span class="inline-block  rounded-full   text-base font-semibold text-grey-darker mr-1">{{ $order->branchphone }}</span>
                             
                         </div>
                     </div>

@@ -52,7 +52,7 @@ class CreateOrderHeaderTable extends Migration
             $table->char('recempcode', 5)->nullable();
             $table->integer('pricetype')->nullable();
             $table->timestamps();
-            $table->bigIncrements('id');
+
         });
     }
 
