@@ -19,7 +19,7 @@
         </div> 
         <div :class="open ? 'block': 'hidden'" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
             <div class="text-sm lg:flex-grow">
-   
+                
                 @auth
                 <div>
                     <a href="/" class="mr-2 no-underline text-white hover:text-red transition text-base mr-3">
@@ -32,10 +32,10 @@
                 
                 @else
                 <div>
-                    
+                    {{-- 
                     <a href="/" class="mr-2 no-underline text-white hover:text-red transition text-base mr-3">
                         หน้าหลัก
-                    </a> 
+                    </a>  --}}
                                         
                     <a href="/tracking" class="mr-2 no-underline text-white hover:text-red transition text-base mr-3">
                         ติดตามสินค้า
@@ -46,7 +46,7 @@
 
             </div>
             <div>
-              
+              {{-- 
                 @auth
                     <a href="{{ route('logout') }}" class="mr-2 no-underline text-white hover:text-red transition text-base mr-3"
                          onclick="event.preventDefault();
@@ -65,7 +65,7 @@
                     <a href="{{ route('register') }}" class="mr-2 no-underline text-white hover:text-red transition text-base mr-3">
                         {{ __('Register') }}
                     </a>
-                @endauth
+                @endauth --}}
             
             </div>
         </div>
