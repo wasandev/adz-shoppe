@@ -30,6 +30,7 @@ Route::any('/tracking', function () {
     $order = Order::where('order_header_no', 'like', '%' . $q)
       ->orWhere('cname', 'like', '%' . $q . '%')
       ->orWhere('sname', 'like', '%' . $q . '%')
+      ->orderByRaw('order_header_date DESC')
       ->get();
 
     if (count($order) > 0)
