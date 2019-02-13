@@ -64,15 +64,15 @@
                             <p class=" no-underline text-sm">วันที่อัพเดทข้อมูล : {{ $order->updated_at }}</p>
                             
                         </div>
-                        <p class="text-sisahy text-sm font-semibold">ใบรับส่ง:{{ $order->order_header_no }} วันที่ส่ง:{{  $order->order_header_date }}</p>  
-                        
+                        <p class="text-sisahy text-sm font-semibold">ใบรับส่ง : {{ $order->order_header_no }}</p>  
+                        <p class="text-sisahy text-sm font-semibold">วันที่ส่ง : {{  $order->order_header_date }}</p>  
                         <p class="text-black no-underline text-sm">ชื่อผู้ส่ง : {{ $order->cname }}</p>
                         <p class="text-black no-underline text-sm">ชื่อผู้รับ : {{ $order->sname }} / {{ $order->amphur_name }} / {{ $order->province_name }} </p>
                         <div class="px-2 py-2">
                             <svg class="fill-current text-grey w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
                             </svg>
-                            <span class="inline-block  rounded-full   text-base font-semibold text-sisahy mr-1">{{ $order->branchname }} </span>
+                            <span class="inline-block  rounded-full   text-base font-semibold text-sisahy mr-1">{{ $order->branchname }} </span><br/>
                             <svg class="fill-current text-grey w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M20 18.35V19a1 1 0 0 1-1 1h-2A17 17 0 0 1 0 3V1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 0 1 .99 1v3.35z"/>
                             </svg>
