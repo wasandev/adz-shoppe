@@ -15,12 +15,12 @@ class Province extends Model
 
     public function amphur()
     {
-        return $this->hasMany('App\Amphur');
+        return $this->hasMany('App\Amphur', 'province_code', 'province_code');
 
     }
     public function tambol()
     {
-        return $this->hasMany('App\Tambol');
+        return $this->hasMany('App\Tambol', 'province_code', 'province_code');
     }
 
     public function customer()

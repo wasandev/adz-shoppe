@@ -31,7 +31,6 @@ class Province extends Resource
      * @var array
      */
     public static $search = [
-        'id',
         'province_code',
         'province_name'
     ];
